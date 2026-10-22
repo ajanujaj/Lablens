@@ -1,0 +1,17 @@
+# LabLens API (inference). Training on Kaggle still uses requirements.txt (unsloth).
+fastapi>=0.110
+uvicorn[standard]>=0.29
+python-multipart>=0.0.9      # file uploads
+docling>=2.50
+torch>=2.2
+transformers>=4.45
+peft>=0.13
+accelerate>=0.30
+
+# Optional
+ocrmac; sys_platform == "darwin"   # macOS built-in OCR (LABLENS_OCR_ENGINE=ocrmac)
+pillow-heif                       # iPhone HEIC photos
+
+# Evaluation and test files (scripts/evaluate.py, data/make_test_files.py)
+reportlab
+httpx
